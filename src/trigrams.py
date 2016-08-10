@@ -1,13 +1,15 @@
 # -*- coding: utf-8 -*-
 """Trigrams can be used to mutate text into new, surreal, forms."""
 import io
-
 import string
 
 
 def main(path, num_word):
     """Main function."""
-    pass
+    f = io.open('sherlock_small.txt', encoding='utf-8')
+    content = f.read()
+    sanitized = sanitize(content)
+    trigrams_dict = process_trigrams(sannitized)
 
 
 def sanitize(input):
@@ -20,8 +22,10 @@ def sanitize(input):
     return input
 
 
-def process_trigram(input):
+def process_trigrams(input):
     """Takes input from text file and turns it into a dictionary."""
+
+    return trigrams_dict
 
 def gener
 
