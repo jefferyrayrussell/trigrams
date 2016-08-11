@@ -7,7 +7,7 @@ import sys
 
 def main(path, num):
     """Main function that executes when script is run"""
-    f = io.open(path, encoding='utf-8')
+    f = io.open('./{0}'.format(path), encoding='utf-8')
     content = f.read()
     f.close()
     sanitized = sanitize(content)
