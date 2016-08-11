@@ -18,14 +18,12 @@ def sanitize(input):
     punc = string.punctuation
     for p in punc:
         input = input.replace(p, " ")
-    input = input.replace("\n", " ")
-    input = input.replace("  ", " ")
-    return input
+    return input.replace("\n", " ").replace("  ", " ").strip()
 
 
 def process_trigrams(input):
     """Takes input from text file and turns it into a dictionary."""
-
+    trigrams_dict = input.split(' ')
     return trigrams_dict
 
 if __name__ == '__main__':
