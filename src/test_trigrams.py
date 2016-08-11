@@ -11,4 +11,6 @@ def test_sanitize():
 
 def test_process_triagrams():
     from trigrams import process_trigrams
-    assert process_trigrams(TEST_TEXT) == {}
+    assert process_trigrams('one two three') == {
+        'one two': 'three'
+    }
